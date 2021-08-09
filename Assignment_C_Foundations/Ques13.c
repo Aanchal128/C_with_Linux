@@ -9,19 +9,28 @@
 
 #include <stdio.h>
 
+// To find length of the string
+int len(char *st)
+{
+    int i = 0;
+    while(st[i] != '\0')
+        i++;
+    return i;
+}
+
 int strend(char s[], char t[])
 {
-    int i = 0, j, k, l;
-    while(s[i]!='\0')
-        i++;
-    // checking from the start of s
-    for ( l = 0; l < i; l++)
+    int i, j, k, l, h;
+    i = len(s);
+    h = len(t);
+    // Checking from (last-size of t)th position of s
+    for (l = i - h; l >= 0; l--)
     {
         // Checking for occurence of t in s
-        for ( j = l, k = 0 ; t[k] != '\0' && s[j] == t[k] ; j++, k++ )
+        for (j = l, k = 0; t[k] != '\0' && s[j] == t[k]; j++, k++)
             ;
         // if t occurs at end of string s -> return 1
-        if ( j == i && t[k] == '\0')
+        if (j == i && t[k] == '\0')
                 return 1;
             
     }
@@ -29,12 +38,13 @@ int strend(char s[], char t[])
 }
 
 int main(){
-    char t[]="kd";
+    char t[] = "kd";
 
-    char s[]="abkdcefkd";
+    char s[] = "abkdcefkd";
     printf("%d\n",strend(s, t)); // Output: 1
 
     char z[] = "abkdcefkdg";
     printf("%d",strend(z, t)); // Output: 0
+
     return 0;
 }

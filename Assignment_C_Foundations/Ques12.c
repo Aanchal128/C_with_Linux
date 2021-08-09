@@ -9,22 +9,27 @@
 
 #include <stdio.h>
 
+// To find length of the string
+int len(char *st)
+{
+    int i = 0;
+    while(st[i]!='\0')
+        i++;
+    return i;
+}
+
 int strrindex(char s[], char t[])
 {
-    int i = 0, j, k,l = 0;
-    while(s[i]!='\0')
-        i++;
-    while(t[l]!='\0')
-        l++;
-    l-=1;
-
+    int i, j, k, l;
+    i = len(s);    
+    l = len(t);
     // Checking from (last-size of t)th position of s
-    for ( i -= l; i >= 0; i--)
+    for (i -= l; i >= 0; i--)
     {
         // Checking for occurence of t in s
-        for ( j = i, k = 0 ; t[k] != '\0' && s[j] == t[k] ; j++, k++ )
+        for (j = i, k = 0; t[k] != '\0' && s[j] == t[k] ; j++, k++)
             ;
-        if ( k > 0 && t[k] == '\0') 
+        if (k > 0 && t[k] == '\0') 
             return i;
     }
     return -1;
@@ -32,7 +37,7 @@ int strrindex(char s[], char t[])
 
 int main(){
     char t[]="kd";
-    char s[]="abkdcdddkdkddf";
+    char s[]="abkdcdddkdkdf";
   
     printf("%d",strrindex(s, t)); //Output => 10
     return 0;
