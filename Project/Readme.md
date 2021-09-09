@@ -2,11 +2,9 @@
 ## Description
 An implementation of T-rex Run (offline game) of Google Chrome.
 Written in C using the [SDL library](https://www.libsdl.org/).
-It was developed on Ubuntu, and currently only compiles and runs in a Linux environment. 
+It was developed on Ubuntu, and currently only compiles and runs in a Linux environment.
+![Screenshot from 2021-09-09 17-57-46 2339](https://user-images.githubusercontent.com/55271996/132716618-7084f8e3-8a68-49e8-810e-953a1d553d04.png)
 
-```
-![screenshot](../Resources/game.png)
-```
 ##  Installation
 In order to compile and run this program, the following dependencies must be satisfied on your Linux distribution:
 
