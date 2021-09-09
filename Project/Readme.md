@@ -5,7 +5,7 @@ Written in C using the [SDL library](https://www.libsdl.org/).
 It was developed on Ubuntu, and currently only compiles and runs in a Linux environment. 
 
 ```
-![screenshot](https://github.com/Aanchal128/C_with_Linux/blob/35445362c37ffb391977902d74919483096d3746/Project/Resources/game.png)
+![screenshot](../Resources/game.png)
 ```
 ##  Installation
 In order to compile and run this program, the following dependencies must be satisfied on your Linux distribution:
